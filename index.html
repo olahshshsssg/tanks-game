@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Open World Horror City</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Подключаем Three.js через CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+<body>
+    <div class="game-container">
+        <!-- Верхний HUD -->
+        <div class="hud-top">
+            <div class="hud-box">
+                <span class="label">ЛОКАЦИЯ</span>
+                <span class="value">Открытый Мегаполис</span>
+            </div>
+            <div class="hud-box center">
+                <span class="label">ЦЕЛИ В ГОРОДЕ</span>
+                <span class="value" id="score">Убито: 0 | Осталось: <span id="enemiesLeft">5</span></span>
+            </div>
+            <div class="hud-box right">
+                <span class="label">ЗДОРОВЬЕ</span>
+                <span class="value hp" id="hp">100 HP</span>
+            </div>
+        </div>
+
+        <!-- Контейнер для 3D сцены (Full HD / Полный экран) -->
+        <div class="canvas-wrapper" id="canvasWrapper">
+            <div class="crosshair">+</div>
+            <!-- Красивые ручные модельки оружия внизу экрана -->
+            <div class="weapon-model">
+                <div class="pistol-slide"></div>
+                <div class="pistol-grip"></div>
+            </div>
+        </div>
+
+        <!-- Нижняя панель управления -->
+        <div class="hud-bottom">
+            <span><span class="key">WASD</span> — Ходьба</span>
+            <span><span class="key">Мышь</span> — Обзор (Клик для захвата)</span>
+            <span><span class="key">ЛКМ</span> — Выстрел</span>
+            <span><span class="key">R</span> — Рестарт</span>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
